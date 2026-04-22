@@ -78,7 +78,7 @@ button {
 <p>
 सप्रेम नमस्कार,<br><br>
 आपणास कळविण्यात आनंद होत आहे की,<br>
-आमच्या नवीन वास्तूची वास्तुशांती व गृहप्रवेश सोहळा आयोजित करण्यात आला आहे.<br><br>
+आपल्या नवीन वास्तूची वास्तुशांती व गृहप्रवेश सोहळा आयोजित करण्यात आला आहे.<br><br>
 तरी आपण सहकुटुंब उपस्थित राहून कार्यक्रमाची शोभा वाढवावी ही नम्र विनंती.
 </p>
 
@@ -88,48 +88,12 @@ button {
 <div class="details">
 <p>📅 दिनांक : २४ एप्रिल</p>
 <p>⏰ वेळ : दुपारी १२ वाजल्यापासून पुढे</p>
-<p>📍 स्थळ : वाघोली</p>
-<p>👨‍👩‍👧‍👦 परिवार : गणेश</p>
+<p>📍 स्थळ : Gangan Aviva, केसनंद रोड</p>
 </div>
 
-</div>
 
-<!-- Buttons -->
-<button onclick="openMap()">📍 लोकेशन</button>
-<button onclick="downloadPDF()">📥 PDF</button>
-<button onclick="toggleMusic()">🎶 संगीत</button>
-<button onclick="shareWhatsApp()">📲 WhatsApp</button>
 
-<!-- Music -->
-<audio id="music" loop>
-<source src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav">
-</audio>
 
-<script>
-function openMap() {
-    window.open("https://www.google.com/maps?q=Wagholi+Pune");
-}
-
-// Replace with your exact Google Maps link if available
-// Example:
-// window.open("https://maps.app.goo.gl/xxxx");
-
-function downloadPDF() {
-    html2pdf().from(document.getElementById("card")).save("Vastushanti.pdf");
-}
-
-let playing = false;
-function toggleMusic() {
-    let m = document.getElementById("music");
-    playing ? m.pause() : m.play();
-    playing = !playing;
-}
-
-function shareWhatsApp() {
-    let text = "वास्तुशांती निमंत्रण:\nhttps://geeta-vastushanti.netlify.app";
-    window.open("https://wa.me/?text=" + encodeURIComponent(text));
-}
-</script>
 
 </body>
 </html>
