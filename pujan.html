@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>वास्तुशांती निमंत्रण</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Noto+Serif+Devanagari&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Baloo 2', sans-serif;
+    background: linear-gradient(135deg, #fff5e6, #ffe0b3);
+    text-align: center;
+}
+
+.card {
+    max-width: 420px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+img {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+h1 { color: #b30000; }
+h2 { color: #cc6600; }
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.details {
+    margin-top: 15px;
+    padding: 10px;
+    background: #fff3e0;
+    border-radius: 10px;
+}
+
+button {
+    margin: 6px;
+    padding: 10px 14px;
+    border: none;
+    background: #ff6600;
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card" id="card">
+
+<!-- Ganpati Header -->
+<img src="https://pngimg.com/uploads/ganesha/ganesha_PNG13.png" alt="Ganpati">
+
+<h1>|| श्री गणेशाय नमः ||</h1>
+
+<h2>वास्तुशांती समारंभ<br>व गृहप्रवेश सोहळा</h2>
+
+<p>
+सप्रेम नमस्कार,<br><br>
+आपणास कळविण्यात आनंद होत आहे की,<br>
+आमच्या नवीन वास्तूची वास्तुशांती व गृहप्रवेश सोहळा आयोजित करण्यात आला आहे.<br><br>
+तरी आपण सहकुटुंब उपस्थित राहून कार्यक्रमाची शोभा वाढवावी ही नम्र विनंती.
+</p>
+
+<!-- House Photo (Replace with your photo link) -->
+<img src="https://via.placeholder.com/400x250?text=Your+House+Photo" alt="घर फोटो">
+
+<div class="details">
+<p>📅 दिनांक : २४ एप्रिल</p>
+<p>⏰ वेळ : दुपारी १२ वाजल्यापासून पुढे</p>
+<p>📍 स्थळ : वाघोली</p>
+<p>👨‍👩‍👧‍👦 परिवार : गणेश</p>
+</div>
+
+</div>
+
+<!-- Buttons -->
+<button onclick="openMap()">📍 लोकेशन</button>
+<button onclick="downloadPDF()">📥 PDF</button>
+<button onclick="toggleMusic()">🎶 संगीत</button>
+<button onclick="shareWhatsApp()">📲 WhatsApp</button>
+
+<!-- Music -->
+<audio id="music" loop>
+<source src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav">
+</audio>
+
+<script>
+function openMap() {
+    window.open("https://www.google.com/maps?q=Wagholi+Pune");
+}
+
+// Replace with your exact Google Maps link if available
+// Example:
+// window.open("https://maps.app.goo.gl/xxxx");
+
+function downloadPDF() {
+    html2pdf().from(document.getElementById("card")).save("Vastushanti.pdf");
+}
+
+let playing = false;
+function toggleMusic() {
+    let m = document.getElementById("music");
+    playing ? m.pause() : m.play();
+    playing = !playing;
+}
+
+function shareWhatsApp() {
+    let text = "वास्तुशांती निमंत्रण:\nhttps://geeta-vastushanti.netlify.app";
+    window.open("https://wa.me/?text=" + encodeURIComponent(text));
+}
+</script>
+
+</body>
+</html>
